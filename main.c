@@ -40,6 +40,7 @@ int main()
 
 	printf("________________________________\n\n");
 
+	printf("ft_memset\n");
 	char s1[100] = "---------------";
 	char s2[100] = "---------------";
 	printf("%s Operation target s1/s2\n", s1);
@@ -48,7 +49,15 @@ int main()
 	printf("%s Own func\n", s1);
 	printf("%s Orig func\n", s2);
 	
-	printf("________________________________\n\n");
+*/	printf("________________________________\n\n");
+
+	printf("ft_bzero\n");
+	char egg[] = "Happy Easter!";
+	printf("Before: %s\n", egg);
+	ft_bzero(egg, 6);
+	printf("After: %s\n", egg);
+
+/*	printf("________________________________\n\n");
 
 	printf("ft_strlcpy\n");
 	char dog[100];
@@ -70,12 +79,12 @@ int main()
 	printf("%s Orig func behavior\n", kitty);
 
 	printf("________________________________\n\n");
-*/
-	char card[] = "9223372036854775808";
+
+	char card[] = "-2147483648";
 	printf("ft_atoi\nTest string: %s\n", card);
 	printf("Own func: %d\n", ft_atoi(card));
 	printf("Orig func: %d\n", atoi(card));
 
 	printf("________________________________\n\n");
-
+*/
 }

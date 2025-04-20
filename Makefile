@@ -10,7 +10,8 @@ CFILES = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_strlcpy.c \
 	ft_toupper.c \
-	ft_memset.c
+	ft_memset.c \
+	ft_bzero.c
 
 OFILES = $(CFILES:.c=.o)
 
