@@ -4,7 +4,7 @@
 
 int main()
 {
-	int testme = 'a';
+/*	int testme = 'g';
 	printf(" TEST SUBJECT: %c\n\n\n", testme);
 
 	printf("ft_isalpha\nShows 0 if not alphabet: %d\n\n", ft_isalpha(testme));
@@ -39,7 +39,17 @@ int main()
 	printf("Length of string is %zu\n", ft_strlen(what));
 
 	printf("________________________________\n\n");
+
+	char s1[100] = "---------------";
+	char s2[100] = "---------------";
+	printf("%s Operation target s1/s2\n", s1);
+	ft_memset(s1, 120, 5);
+	memset(s2, 120, 5);
+	printf("%s Own func\n", s1);
+	printf("%s Orig func\n", s2);
 	
+	printf("________________________________\n\n");
+
 	printf("ft_strlcpy\n");
 	char dog[100];
 	char doggo[100];
@@ -60,8 +70,8 @@ int main()
 	printf("%s Orig func behavior\n", kitty);
 
 	printf("________________________________\n\n");
-
-	char card[] = "     +0123456e89";
+*/
+	char card[] = "9223372036854775808";
 	printf("ft_atoi\nTest string: %s\n", card);
 	printf("Own func: %d\n", ft_atoi(card));
 	printf("Orig func: %d\n", atoi(card));

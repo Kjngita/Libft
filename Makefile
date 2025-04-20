@@ -10,6 +10,7 @@ CFILES = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_strlcpy.c \
 	ft_toupper.c \
+	ft_memset.c
 
 OFILES = $(CFILES:.c=.o)
 
@@ -34,6 +35,7 @@ re: fclean all
 test: main.c $(NAME)
 	cc $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
+	rm cuckoo
 
 .SILENT:
 
