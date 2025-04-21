@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 16:58:31 by gita              #+#    #+#             */
-/*   Updated: 2025/04/21 20:02:21 by gita             ###   ########.fr       */
+/*   Created: 2025/04/21 19:55:32 by gita              #+#    #+#             */
+/*   Updated: 2025/04/21 20:28:43 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char			*cat;
-	unsigned int	i;
+	char	*sky;
+	int		i;
 
-	cat = (char *)s;
-	i = 0;
-	while (cat[i] || c == '\0')
+	sky = (char *)s;
+	i = ft_strlen(sky);
+	while (i >= 0)
 	{
-		if (cat[i] == c)
-			return (cat + i);
-		i++;
+		if (sky[i] == c || c == 0)
+			return (sky + i);
+		i--;
 	}
 	return (NULL);
 }

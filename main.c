@@ -51,6 +51,16 @@ int main()
 	printf("After: %s\n", egg);
 	printf("________________________________\n\n");
 	
+	printf("ft_memcpy.c\n");
+	char al[] = "Hand disinfectant";
+	char fa[] = "Antibacterial";
+	printf("Dest: %s\nSrc: %s\n", al, fa);
+	char* alfa = ft_memcpy(al, fa, 8);
+	char* bottle = memcpy(al, fa, 8);
+	printf("%s Own func\n", alfa);
+	printf("%s Orig func\n", bottle);
+	printf("________________________________\n\n");	
+	
 	printf("ft_memmove. Test: dest comes before/after src\n");
 	char w[50] = "Twinkle twinkle little star";
 	char j[50] = "Twinkle twinkle little star";
@@ -61,14 +71,25 @@ int main()
 	printf("%s Orig func\n", j);
 	printf("________________________________\n\n");
 	
-	printf("ft_memcpy.c\n");
-	char al[] = "Hand disinfectant";
-	char fa[] = "Antibacterial";
-	printf("Dest: %s\nSrc: %s\n", al, fa);
-	char* alfa = ft_memcpy(al, fa, 8);
-	char* bottle = memcpy(al, fa, 8);
-	printf("%s Own func\n", alfa);
-	printf("%s Orig func\n", bottle);
+	char chick[] = "I'm so hungry";
+	printf("String: %s\n\n", chick);
+	printf("ft_strchr. Test: Arnold, yes match, no match\n");
+	char* hen = ft_strchr(chick, 'z');
+	char* rooster = strchr(chick, 'z');
+	printf("%p Pointer address of own func result\n", hen);
+	printf("%p Pointer address of orig func result\n", rooster);
+	printf("%p Pointer address of Arnold in string\n", chick+strlen(chick));
+	printf("%s Own func\n", hen);
+	printf("%s Orig func\n\n", rooster);
+
+	printf("ft_strrchr\n");
+	char* fillet = ft_strrchr(chick, 'g');
+	char* leg = strrchr(chick, 'g');
+	printf("%p Pointer address of own func result\n", fillet);
+	printf("%p Pointer address of orig func result\n", leg);
+	printf("%p Pointer address of Arnold in string\n", chick+strlen(chick));
+	printf("%s Own func\n", fillet);
+	printf("%s Orig func\n", leg);
 	printf("________________________________\n\n");
 
 	printf("ft_strlcpy. Test: empty dest, source, size\n");
@@ -98,12 +119,5 @@ int main()
 	printf("Orig func: %d\n", atoi(card));
 	printf("________________________________\n\n");
 */
-	printf("ft_strchr. Test: Arnold, yes match, no match\n");
-	char chick[] = "I'm so hungry";
-	char* hen = ft_strchr(chick, 0);
-//	char* 
-	printf("%p Pointer address of result\n", hen);
-	printf("%p Pointer address of Arnold in src \n", chick+strlen(chick));
-	printf("%s\n", hen);
-	printf("________________________________\n\n");
+
 }
