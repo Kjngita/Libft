@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 23:32:56 by gita              #+#    #+#             */
-/*   Updated: 2025/04/21 17:10:19 by gita             ###   ########.fr       */
+/*   Created: 2025/04/21 16:58:31 by gita              #+#    #+#             */
+/*   Updated: 2025/04/21 19:38:37 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t				i;
+	char			*cat;
+	unsigned int	i;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d < s)
+	cat = (char *)s;
+	i = 0;
+	while (cat[i] || c == '\0')
 	{
-		i = 0;
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		if (cat[i] == c)
+			return (cat + i);
+		i++;
 	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			d[i - 1] = s[i - 1];
-			i--;
-		}
-	}
-	return (dest);
+	return (NULL);
 }

@@ -98,5 +98,12 @@ int main()
 	printf("Orig func: %d\n", atoi(card));
 	printf("________________________________\n\n");
 */
-
+	printf("ft_strchr. Test: Arnold, yes match, no match\n");
+	char chick[] = "I'm so hungry";
+	char* hen = ft_strchr(chick, 0);
+//	char* 
+	printf("%p Pointer address of result\n", hen);
+	printf("%p Pointer address of Arnold in src \n", chick+strlen(chick));
+	printf("%s\n", hen);
+	printf("________________________________\n\n");
 }
