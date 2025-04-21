@@ -71,6 +71,26 @@ int main()
 	printf("%s Orig func\n", j);
 	printf("________________________________\n\n");
 	
+	printf("ft_strlcpy. Test: empty dest, source, size\n");
+	char dog[100];
+	char doggo[100];
+	char cat[] = "To infinity and beyond";
+	printf("%zu Own func\n", ft_strlcpy(dog, cat, 10));
+	printf("%zu Orig func\n", strlcpy(doggo, cat, 10));
+	printf("%s Own func behavior\n", dog);
+	printf("%s Orig func behavior\n", doggo);
+	printf("________________________________\n\n");
+
+	printf("ft_strlcat. Test: Empty dest, empty src, size <dest, >dest, >dest size\n");
+	char kit[100] = "Baby shark ";
+	char kitty[100] = "Baby shark ";
+	char pup[] = "dududududu";
+	printf("%zu Own func\n", ft_strlcat(kit, pup, 13));
+	printf("%zu Orig func\n", strlcat(kitty, pup, 13));
+	printf("%s Own func behavior\n", kit);
+	printf("%s Orig func behavior\n", kitty);
+	printf("________________________________\n\n");
+	
 	char chick[] = "I'm so hungry";
 	printf("String: %s\n\n", chick);
 	printf("ft_strchr. Test: Arnold, yes match, no match\n");
@@ -92,24 +112,14 @@ int main()
 	printf("%s Orig func\n", leg);
 	printf("________________________________\n\n");
 
-	printf("ft_strlcpy. Test: empty dest, source, size\n");
-	char dog[100];
-	char doggo[100];
-	char cat[] = "To infinity and beyond";
-	printf("%zu Own func\n", ft_strlcpy(dog, cat, 10));
-	printf("%zu Orig func\n", strlcpy(doggo, cat, 10));
-	printf("%s Own func behavior\n", dog);
-	printf("%s Orig func behavior\n", doggo);
-	printf("________________________________\n\n");
-
-	printf("ft_strlcat. Test: Empty dest, empty src, size <dest, >dest, >dest size\n");
-	char kit[100] = "Baby shark ";
-	char kitty[100] = "Baby shark ";
-	char pup[] = "dududududu";
-	printf("%zu Own func\n", ft_strlcat(kit, pup, 13));
-	printf("%zu Orig func\n", strlcat(kitty, pup, 13));
-	printf("%s Own func behavior\n", kit);
-	printf("%s Orig func behavior\n", kitty);
+	printf("ft_strncmp. Test: empty string/strings, small/big num\n");
+	char s1[] = "Hi there";
+	char s2[] = "Hi where";
+	size_t num = 20;
+	printf("s1: %s\n", s1);
+	printf("s2: %s\n", s2);
+	printf("%d Own func\n", ft_strncmp(s1, s2, num));
+	printf("%d Orig func\n", strncmp(s1, s2, num));
 	printf("________________________________\n\n");
 
 	printf("ft_atoi. Tests: spaces, 1/multiple sign, 0 in beginning, int min/max\n");

@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:52:18 by gita              #+#    #+#             */
-/*   Updated: 2025/04/21 20:24:13 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/21 20:57:06 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
