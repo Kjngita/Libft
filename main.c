@@ -113,13 +113,24 @@ int main()
 	printf("________________________________\n\n");
 
 	printf("ft_strncmp. Test: empty string/strings, small/big num\n");
-	char s1[] = "Hi there";
-	char s2[] = "Hi where";
+	char st1[] = "Hi there";
+	char st2[] = "Hi where";
 	size_t num = 20;
-	printf("s1: %s\n", s1);
-	printf("s2: %s\n", s2);
-	printf("%d Own func\n", ft_strncmp(s1, s2, num));
-	printf("%d Orig func\n", strncmp(s1, s2, num));
+	printf("st1: %s\n", st1);
+	printf("st2: %s\n", st2);
+	printf("%d Own func\n", ft_strncmp(st1, st2, num));
+	printf("%d Orig func\n", strncmp(st1, st2, num));
+	printf("________________________________\n\n");
+
+	printf("ft_strnstr. Test: empty little string, small/big len\n");
+	const char *s = "Mary has a little lamb";
+	const char *f = "a li";
+	printf("Big string:\t%s\n", s);
+	printf("Little string:\t%s\n", f);
+	char *me = ft_strnstr(s, f, 10);
+	char *func = strnstr(s, f, 10);
+	printf("%s Own func\n", me);
+	printf("%s Orig func\n", func);
 	printf("________________________________\n\n");
 
 	printf("ft_atoi. Tests: spaces, 1/multiple sign, 0 in beginning, int min/max\n");
