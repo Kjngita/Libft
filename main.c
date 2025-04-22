@@ -93,9 +93,10 @@ int main()
 	
 	char chick[] = "I'm so hungry";
 	printf("String: %s\n\n", chick);
+	
 	printf("ft_strchr. Test: Arnold, yes match, no match\n");
-	char* hen = ft_strchr(chick, 'z');
-	char* rooster = strchr(chick, 'z');
+	char* hen = ft_strchr(chick, '+');
+	char* rooster = strchr(chick, '+');
 	printf("%p Pointer address of own func result\n", hen);
 	printf("%p Pointer address of orig func result\n", rooster);
 	printf("%p Pointer address of Arnold in string\n", chick+strlen(chick));
@@ -120,6 +121,18 @@ int main()
 	printf("st2: %s\n", st2);
 	printf("%d Own func\n", ft_strncmp(st1, st2, num));
 	printf("%d Orig func\n", strncmp(st1, st2, num));
+	printf("________________________________\n\n");
+
+	printf("ft_memchr. Test: find Arnold with less/more length\n");
+	char *lemon = "When life gives you lemon";
+	int lemonade = 'g';
+	char *p = ft_memchr(lemon, lemonade, 30);
+	char *o = memchr(lemon, lemonade, 30);
+	printf("%p String's Arnold address\n", lemon + ft_strlen(lemon));
+	printf("%p Own func pointer address\n", p);
+	printf("%p Orig func pointer address\n", o);
+	printf("%s Own func\n", p);
+	printf("%s Orig func\n", o);
 	printf("________________________________\n\n");
 
 	printf("ft_strnstr. Test: empty little string, small/big len\n");

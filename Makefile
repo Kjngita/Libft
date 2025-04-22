@@ -17,7 +17,8 @@ CFILES = ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
-	ft_strnstr.c
+	ft_strnstr.c \
+	ft_memchr.c
 
 OFILES = $(CFILES:.c=.o)
 
@@ -43,6 +44,7 @@ test: main.c $(NAME)
 	cc $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm cuckoo
+	rm $(OFILES)
 
 .SILENT:
 
