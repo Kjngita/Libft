@@ -81,12 +81,12 @@ int main()
 	printf("%s Orig func behavior\n", doggo);
 	printf("________________________________\n\n");
 
-	printf("ft_strlcat. Test: Empty dest, empty src, size <dest, >dest, >dest size\n");
+	printf("ft_strlcat. Test: Empty dest, empty src, size <dest / >dest\n");
 	char kit[100] = "Baby shark ";
 	char kitty[100] = "Baby shark ";
 	char pup[] = "dududududu";
-	printf("%zu Own func\n", ft_strlcat(kit, pup, 13));
-	printf("%zu Orig func\n", strlcat(kitty, pup, 13));
+	printf("%zu Own func\n", ft_strlcat(kit, pup, 15));
+	printf("%zu Orig func\n", strlcat(kitty, pup, 15));
 	printf("%s Own func behavior\n", kit);
 	printf("%s Orig func behavior\n", kitty);
 	printf("________________________________\n\n");
@@ -112,17 +112,17 @@ int main()
 	printf("%s Own func\n", fillet);
 	printf("%s Orig func\n", leg);
 	printf("________________________________\n\n");
-
-	printf("ft_strncmp. Test: empty string/strings, small/big num\n");
+*/
+	printf("ft_strncmp. Test: empty string/strings, small/big num, strings with octal num\n");
 	char st1[] = "Hi there";
-	char st2[] = "Hi where";
-	size_t num = 20;
+	char st2[] = "Hi =here";
+	size_t num = 512;
 	printf("st1: %s\n", st1);
 	printf("st2: %s\n", st2);
-	printf("%d Own func\n", ft_strncmp(st1, st2, num));
+	printf("%d Own func, same sign with orig func?\n", ft_strncmp(st1, st2, num));
 	printf("%d Orig func\n", strncmp(st1, st2, num));
 	printf("________________________________\n\n");
-
+/*
 	printf("ft_memchr. Test: find Arnold with less/more length\n");
 	char *lemon = "When life gives you lemon";
 	int lemonade = 'g';
@@ -153,5 +153,12 @@ int main()
 	printf("Orig func: %d\n", atoi(card));
 	printf("________________________________\n\n");
 */
-
+	printf("ft_memcmp\n");
+	char *left = "abc\250";
+	char *right = "abc\0";
+	printf("1st string:  %s\n", left);
+	printf("2nd string:  %s\n", right);
+	printf("Own func: %d\n", ft_memcmp(left, right, 50));
+	printf("Orig func: %d\n", memcmp(left,right, 50));
+	printf("________________________________\n\n");
 }
