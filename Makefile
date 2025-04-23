@@ -41,7 +41,7 @@ fclean: clean
 
 re: fclean all
 
-test: main.c $(NAME)
+test: testAxel.c $(NAME)
 	cc $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm cuckoo

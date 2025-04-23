@@ -114,12 +114,12 @@ int main()
 	printf("________________________________\n\n");
 */
 	printf("ft_strncmp. Test: empty string/strings, small/big num, strings with octal num\n");
-	char st1[] = "Hi there";
-	char st2[] = "Hi =here";
+	char st1[] = "a\200";
+	char st2[] = "a\0";
 	size_t num = 512;
 	printf("st1: %s\n", st1);
 	printf("st2: %s\n", st2);
-	printf("%d Own func, same sign with orig func?\n", ft_strncmp(st1, st2, num));
+	printf("%d Own func\n", ft_strncmp(st1, st2, num));
 	printf("%d Orig func\n", strncmp(st1, st2, num));
 	printf("________________________________\n\n");
 /*
@@ -154,8 +154,8 @@ int main()
 	printf("________________________________\n\n");
 */
 	printf("ft_memcmp\n");
-	char *left = "abc\250";
-	char *right = "abc\0";
+	char *left = "abc\00";
+	char *right = "abc\200";
 	printf("1st string:  %s\n", left);
 	printf("2nd string:  %s\n", right);
 	printf("Own func: %d\n", ft_memcmp(left, right, 50));

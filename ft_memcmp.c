@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 21:27:26 by gita              #+#    #+#             */
-/*   Updated: 2025/04/22 23:45:45 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/23 15:08:00 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*first;
-	const char	*second;
+	const unsigned char	*first;
+	const unsigned char	*second;
 	size_t	i;
 
 	first = (const unsigned char *)s1;
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (first[i] != second[i])
-			return ((first[i] > second[i]) - (first[i] < second[i]));
+			return ((first[i] - second[i]));
 		i++;
 	}
 	return (0);
