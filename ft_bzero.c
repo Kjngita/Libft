@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:34:18 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 15:12:03 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 16:40:28 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	s = ft_memset(s, '\0', n);
 }
-
-/*
-#include<stdio.h>
-int main()
-{
-	char egg[] = "Happy Easter!";
-	printf("Before: %s\n", egg);
-	ft_bzero(egg, 6);
-	printf("After: %s\n", egg);
-}*/

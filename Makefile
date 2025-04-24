@@ -20,7 +20,8 @@ CFILES = ft_isalpha.c \
 	ft_strnstr.c \
 	ft_memchr.c  \
 	ft_memcmp.c \
-	ft_strdup.c
+	ft_strdup.c \
+	ft_calloc.c
 
 OFILES = $(CFILES:.c=.o)
 

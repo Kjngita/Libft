@@ -6,13 +6,16 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:19:11 by gita              #+#    #+#             */
-/*   Updated: 2025/04/18 22:56:55 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 16:46:51 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if (c < 65 || (c >= 91 && c <= 96) || c > 122)
+	char	ch;
+	
+	ch = (unsigned char) c;	
+	if (ch < 65 || (ch >= 91 && ch <= 96) || ch > 122)
 		return (0);
 	else
 		return (68);

@@ -6,13 +6,13 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:15:23 by gita              #+#    #+#             */
-/*   Updated: 2025/04/14 18:55:55 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 16:47:44 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c < 127)
+	if ((unsigned char)c >= 32 && (unsigned char)c < 127)
 		return (7);
 	else
 		return (0);
