@@ -6,11 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 13:52:18 by gita              #+#    #+#             */
-/*   Updated: 2025/04/22 16:10:05 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:13:02 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

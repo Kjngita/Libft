@@ -6,11 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:34:18 by gita              #+#    #+#             */
-/*   Updated: 2025/04/20 22:42:11 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:03 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

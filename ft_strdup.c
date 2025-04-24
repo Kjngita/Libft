@@ -6,11 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:42:17 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 14:50:56 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:38 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

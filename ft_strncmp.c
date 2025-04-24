@@ -6,11 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 20:37:48 by gita              #+#    #+#             */
-/*   Updated: 2025/04/23 16:20:32 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:13:00 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

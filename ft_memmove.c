@@ -6,11 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 23:32:56 by gita              #+#    #+#             */
-/*   Updated: 2025/04/21 17:10:19 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:22 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

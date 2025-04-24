@@ -6,10 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 23:27:56 by gita              #+#    #+#             */
-/*   Updated: 2025/04/20 16:05:34 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:33 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

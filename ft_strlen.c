@@ -6,10 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:00:59 by gita              #+#    #+#             */
-/*   Updated: 2025/04/17 20:33:30 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:57 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

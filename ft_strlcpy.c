@@ -6,10 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 15:05:37 by gita              #+#    #+#             */
-/*   Updated: 2025/04/17 19:53:44 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:12:50 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

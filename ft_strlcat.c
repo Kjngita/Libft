@@ -6,10 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:21:49 by gita              #+#    #+#             */
-/*   Updated: 2025/04/18 19:31:58 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 15:11:46 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
