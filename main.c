@@ -112,7 +112,7 @@ int main()
 	printf("%s Own func\n", fillet);
 	printf("%s Orig func\n", leg);
 	printf("________________________________\n\n");
-*/
+
 	printf("ft_strncmp. Test: empty string/strings, small/big num, strings with octal num\n");
 	char st1[] = "a\200";
 	char st2[] = "a\0";
@@ -122,7 +122,7 @@ int main()
 	printf("%d Own func\n", ft_strncmp(st1, st2, num));
 	printf("%d Orig func\n", strncmp(st1, st2, num));
 	printf("________________________________\n\n");
-/*
+
 	printf("ft_memchr. Test: find Arnold with less/more length\n");
 	char *lemon = "When life gives you lemon";
 	int lemonade = 'g';
@@ -134,7 +134,16 @@ int main()
 	printf("%s Own func\n", p);
 	printf("%s Orig func\n", o);
 	printf("________________________________\n\n");
-
+	
+	printf("ft_memcmp\n");
+	char *left = "abc";
+	char *right = "ABC";
+	printf("1st string:  %s\n", left);
+	printf("2nd string:  %s\n", right);
+	printf("Own func: %d\n", ft_memcmp(left, right, 3));
+	printf("Orig func: %d\n", memcmp(left,right, 3));
+	printf("________________________________\n\n");
+	
 	printf("ft_strnstr. Test: empty little string, small/big len\n");
 	const char *s = "Mary has a little lamb";
 	const char *f = "a li";
@@ -153,12 +162,13 @@ int main()
 	printf("Orig func: %d\n", atoi(card));
 	printf("________________________________\n\n");
 */
-	printf("ft_memcmp\n");
-	char *left = "abc\00";
-	char *right = "abc\200";
-	printf("1st string:  %s\n", left);
-	printf("2nd string:  %s\n", right);
-	printf("Own func: %d\n", ft_memcmp(left, right, 50));
-	printf("Orig func: %d\n", memcmp(left,right, 50));
+
+
+	char *string = "";
+	char *own = ft_strdup(string);
+	char *orig = strdup(string);
+	printf("Difference between own & orig func: %d\n", strcmp(own, orig));
+	printf("%s Own func\n", own);
+	printf("%s Orig func\n", orig);
 	printf("________________________________\n\n");
 }

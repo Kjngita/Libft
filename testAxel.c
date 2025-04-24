@@ -363,13 +363,13 @@ int main()
 		ASSERT(!ft_calloc(2, SIZE_MAX) == !calloc(2, SIZE_MAX));
 		ASSERT(!ft_calloc(SIZE_MAX, SIZE_MAX) == !calloc(SIZE_MAX, SIZE_MAX));
 	}
-
+*/
 	SECTION("ft_strdup");
 	{
 		ASSERT(strcmp(strdup("hello"), ft_strdup("hello")) == 0);
 		ASSERT(strcmp(strdup(""), ft_strdup("")) == 0);
 	}
-
+/*
 	SECTION("ft_substr");
 	{
 		ASSERT(strcmp(ft_substr("hello", 0, 4), "hell") == 0);
