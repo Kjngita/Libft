@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 17:19:47 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 15:14:15 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/24 22:54:44 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (pnt[i] == c)
+		if (pnt[i] == rock)
 			return (pnt + i);
 		i++;
 	}

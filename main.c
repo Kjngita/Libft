@@ -135,7 +135,14 @@ int main()
 	printf("%s Orig func\n", o);
 	printf("________________________________\n\n");
 	
-
+	printf("ft_memcmp\n");
+	char *left = "abc";
+	char *right = "ABC";
+	printf("1st string:  %s\n", left);
+	printf("2nd string:  %s\n", right);
+	printf("Own func: %d\n", ft_memcmp(left, right, 3));
+	printf("Orig func: %d\n", memcmp(left,right, 3));
+	printf("________________________________\n\n");
 
 	printf("ft_strnstr. Test: empty little string, small/big len\n");
 	const char *s = "Mary has a little lamb";
@@ -154,17 +161,8 @@ int main()
 	printf("Own func: %d\n", ft_atoi(card));
 	printf("Orig func: %d\n", atoi(card));
 	printf("________________________________\n\n");
-*/
-	printf("ft_memcmp\n");
-	char *left = "abc";
-	char *right = "ABC";
-	printf("1st string:  %s\n", left);
-	printf("2nd string:  %s\n", right);
-	printf("Own func: %d\n", ft_memcmp(left, right, 3));
-	printf("Orig func: %d\n", memcmp(left,right, 3));
-	printf("________________________________\n\n");
 
-	printf("ft_memcmp\n");
+	printf("ft_strdup\n");
 	char *string = "";
 	char *own = ft_strdup(string);
 	char *orig = strdup(string);
@@ -172,4 +170,16 @@ int main()
 	printf("%s Own func\n", own);
 	printf("%s Orig func\n", orig);
 	printf("________________________________\n\n");
+
+	printf("ft_substr. Test empty string, start/len = 0, start >= strlen\n");
+	const char *mom = "Delivery in 9 months 10 days";
+	int stArt = 0;
+	size_t lEn = 20;
+	char *offspring = ft_substr(mom, stArt, lEn);
+	printf("String: %s\nstart = %i; len = %zu\n", mom, stArt, lEn);
+	printf("%s\n", offspring);
+	printf("________________________________\n\n");
+
+*/
+
 }

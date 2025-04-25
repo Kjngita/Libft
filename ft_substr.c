@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 16:42:17 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 20:57:47 by gita             ###   ########.fr       */
+/*   Created: 2025/04/24 19:17:33 by gita              #+#    #+#             */
+/*   Updated: 2025/04/25 15:28:28 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dumpster;
-	size_t	length;
-	size_t	i;
+	char	*baby;
 
-	length = ft_strlen(s);
-	dumpster = malloc((length + 1) * sizeof(char));
-	if (dumpster == NULL)
+	if (s == 0)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	baby = malloc((len + 1) * sizeof(char));
+	if (baby == NULL)
 		return (NULL);
 	else
 	{
-		i = 0;
-		while (s[i])
-		{
-			dumpster[i] = s[i];
-			i++;
-		}
-		dumpster[i] = '\0';
+		if (ft_strlen(s) - start < len)
+			len = ft_strlen(s) - start;
+		baby = ft_memcpy(baby, s + start, len);
 	}
-	return (dumpster);
+	return (baby);
 }

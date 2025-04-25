@@ -21,7 +21,8 @@ CFILES = ft_isalpha.c \
 	ft_memchr.c  \
 	ft_memcmp.c \
 	ft_strdup.c \
-	ft_calloc.c
+	ft_calloc.c \
+	ft_substr.c
 
 OFILES = $(CFILES:.c=.o)
 
@@ -44,7 +45,7 @@ fclean: clean
 re: fclean all
 
 test: testAxel.c $(NAME)
-	cc $(CFLAGS) -lbsd $^ -o cuckoo
+	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm cuckoo
 	rm $(OFILES)
