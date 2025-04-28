@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/28 13:55:41 by gita              #+#    #+#             */
+/*   Updated: 2025/04/28 14:59:55 by gita             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char *ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	head;
+	size_t	tail;
+
+	i = 0;
+	if (!s1 || set == NULL)
+		return (NULL);
+	while (ft_strchr(set, s1[i]) != NULL)
+		i++;
+	head = i;
+	while (s1 && ft_strchr(set, s1[i]) == NULL)
+		i++;
+	tail = i;
+	return(ft_substr(s1, head, tail - head));
+}
+
+#include<stdio.h>
+int main()
+{
+	char *snake = "=-=-=- frog =-tadpole=-=-=-";
+	char *venom = "=-=-";
+	printf("%s\n", ft_strtrim(snake, venom));
+}
