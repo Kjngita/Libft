@@ -179,7 +179,13 @@ int main()
 	printf("String: %s\nstart = %i; len = %zu\n", mom, stArt, lEn);
 	printf("%s\n", offspring);
 	printf("________________________________\n\n");
-
+	
+	printf("ft_strjoin\n");
+	char *mate1 = "Double ";
+	char *mate2 = "trouble";
+	char *teammate = ft_strjoin(mate1, mate2);
+	printf("%s\n", teammate);
+	printf("________________________________\n\n");
 */
 
 }
