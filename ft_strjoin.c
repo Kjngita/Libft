@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:24:18 by gita              #+#    #+#             */
-/*   Updated: 2025/04/28 13:44:18 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/28 13:56:13 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*team;
-	
+
 	team = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (team == NULL)
 		return (NULL);
