@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:55:41 by gita              #+#    #+#             */
-/*   Updated: 2025/04/28 15:45:36 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/28 16:06:01 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 			tail = i;
 		i++;
 	}
-	return(ft_substr(s1, head, tail - head + 1));
+	return (ft_substr(s1, head, tail - head + 1));
 }
