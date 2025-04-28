@@ -23,7 +23,8 @@ CFILES = ft_isalpha.c \
 	ft_strdup.c \
 	ft_calloc.c \
 	ft_substr.c \
-	ft_strjoin.c
+	ft_strjoin.c \
+	ft_strtrim.c
 
 OFILES = $(CFILES:.c=.o)
 
@@ -45,7 +46,7 @@ fclean: clean
 
 re: fclean all
 
-test: main.c $(NAME)
+test: testAxel.c $(NAME)
 	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm cuckoo
