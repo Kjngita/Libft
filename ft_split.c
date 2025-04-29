@@ -6,11 +6,12 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:04:02 by gita              #+#    #+#             */
-/*   Updated: 2025/04/29 14:16:53 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/29 16:55:41 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	skip_this(char c, char sep)
 {
@@ -18,7 +19,7 @@ static int	skip_this(char c, char sep)
 		return (1);
 	return (0);
 }
-static int	one_word_len(char const *s, char c)
+static size_t	one_word_len(char const *s, char c)
 {
 	int	foot;
 
@@ -30,10 +31,10 @@ static int	one_word_len(char const *s, char c)
 	}
 	return (foot);
 }
-static int	number_of_words(char const *s, char c)
+static size_t	number_of_words(char const *s, char c)
 {
-	int	number;
-	int	start_word;
+	size_t	number;
+	int		start_word;
 
 	number = 0;
 	start_word = 0;
@@ -70,7 +71,7 @@ char	**ft_split(char const *s, char c)
 	feather = malloc((number_of_words(s, c) + 1) * sizeof(char *));
 	if (feather == NULL)
 		return (NULL);
-	while (s)
+	while (*s)
 	{
 		if (!skip_this(*s, c))
 		{
@@ -87,10 +88,14 @@ char	**ft_split(char const *s, char c)
 }
 
 int main ()
-{
-	char *cake = "  flour   sugar    bksd     ";
+{ //rmb to delete stdio header
+	char *cake = "   flour  sugar    bksd ";
 	char **slice = ft_split(cake, ' ');
-	__builtin_printf("%s\n", slice[0]);
-	__builtin_printf("%s\n", slice[1]);
-	__builtin_printf("%s\n", slice[2]);
+	
+	printf("%s\n", slice[0]);
+	printf("%s\n", slice[1]);
+	printf("%s\n", slice[2]);
+	printf("%s\n", slice[3]);
+	free(slice);
+	return (0);
 }
