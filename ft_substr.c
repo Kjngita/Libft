@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:17:33 by gita              #+#    #+#             */
-/*   Updated: 2025/04/29 15:02:05 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/30 14:53:48 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (baby == NULL)
 		return (NULL);
 	baby = ft_memcpy(baby, s + start, len);
+	baby[len] = '\0';
 	return (baby);
 }
