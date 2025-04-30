@@ -186,11 +186,27 @@ int main()
 	char *teammate = ft_strjoin(mate1, mate2);
 	printf("%s\n", teammate);
 	printf("________________________________\n\n");
-
-*/
+	
 	printf("ft_strtrim. Test empty string/set\n");
 	char *snake = "=-=--=-== frog =-= tadpole=-=----=";
 	char *venom = "=-";
 	printf("Before trim: '%s' Char set: %s\nAfter trim: '%s'\n", snake, venom, ft_strtrim(snake, venom));
 	printf("________________________________\n\n");
+
+*/
+	printf("THE ft_split. Horrible stuff TT_TT\n");
+	char *cake = "   flour  sugar    bksd ";
+	char topping = ' ';
+	char **slice = ft_split(cake, topping);
+	printf("String: '%s'\nDelimiter char: '%c'\n", cake, topping);
+	int i = 0;
+	while (slice[i])
+	{
+		printf("'%s'\n", slice[i]);
+		i++;
+	}
+	free(slice);
+	return (0);
+	printf("________________________________\n\n");
+
 }

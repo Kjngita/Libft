@@ -6,12 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:04:02 by gita              #+#    #+#             */
-/*   Updated: 2025/04/29 16:55:41 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/30 15:25:22 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	skip_this(char c, char sep)
 {
@@ -54,10 +53,13 @@ static size_t	number_of_words(char const *s, char c)
 }
 static void	*release(char **arr_of_pointers, int m)
 {
-	while (arr_of_pointers[m])
+	int	i;
+
+	i = 0;
+	while (i <= m)
 	{
-		free (arr_of_pointers[m]);
-		m--;
+		free (arr_of_pointers[i]);
+		i++;;
 	}
 	free (arr_of_pointers);
 	return (NULL);
@@ -66,9 +68,11 @@ char	**ft_split(char const *s, char c)
 {
 	char	**feather;
 	int		i;
+	int		count;
 
 	i = 0;
-	feather = malloc((number_of_words(s, c) + 1) * sizeof(char *));
+	count = number_of_words(s, c);
+	feather = malloc((count + 1) * sizeof(char *));
 	if (feather == NULL)
 		return (NULL);
 	while (*s)
@@ -76,26 +80,13 @@ char	**ft_split(char const *s, char c)
 		if (!skip_this(*s, c))
 		{
 			feather[i] = ft_substr(s, 0, one_word_len(s, c));
-			if (feather[i] == 0)
+			if (!feather[i])
 				return (release(feather, i));
-			s += one_word_len(s, c);
+			s += one_word_len(s, c) - 1;
 			i++;
 		}
 		s++;
 	}
 	feather[i] = NULL;
 	return (feather);
-}
-
-int main ()
-{ //rmb to delete stdio header
-	char *cake = "   flour  sugar    bksd ";
-	char **slice = ft_split(cake, ' ');
-	
-	printf("%s\n", slice[0]);
-	printf("%s\n", slice[1]);
-	printf("%s\n", slice[2]);
-	printf("%s\n", slice[3]);
-	free(slice);
-	return (0);
 }

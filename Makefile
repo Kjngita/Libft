@@ -40,14 +40,14 @@ all: $(NAME) clean
 	cc $(CFLAGS) -c $^
 
 clean:
-	rm $(OFILES)
+	rm -f $(OFILES)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-test: testAxel.c $(NAME)
+test: main.c $(NAME)
 	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm cuckoo
