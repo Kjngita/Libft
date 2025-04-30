@@ -192,8 +192,7 @@ int main()
 	char *venom = "=-";
 	printf("Before trim: '%s' Char set: %s\nAfter trim: '%s'\n", snake, venom, ft_strtrim(snake, venom));
 	printf("________________________________\n\n");
-
-*/
+	
 	printf("THE ft_split. Horrible stuff TT_TT\n");
 	char *cake = "   flour  sugar    bksd ";
 	char topping = ' ';
@@ -208,5 +207,10 @@ int main()
 	free(slice);
 	return (0);
 	printf("________________________________\n\n");
-
+*/
+	printf("ft_itoa\n");
+	int nb = -1235463983;
+	printf("Here is the int:\t%i\n", nb);
+	printf("Here is the string:\t%s\n", ft_itoa(nb));
+	printf("________________________________\n\n");
 }
