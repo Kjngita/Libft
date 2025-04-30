@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:04:02 by gita              #+#    #+#             */
-/*   Updated: 2025/04/30 15:57:26 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/30 21:27:18 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ static void	*release(char **arr_of_pointers, int m)
 		i++;
 	}
 	free (arr_of_pointers);
+	arr_of_pointers = NULL;
 	return (NULL);
 }
 

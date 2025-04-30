@@ -50,7 +50,6 @@ re: fclean all
 test: main.c $(NAME)
 	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
-	rm cuckoo
 	rm $(OFILES)
 
 .SILENT:
