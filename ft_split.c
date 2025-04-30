@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:04:02 by gita              #+#    #+#             */
-/*   Updated: 2025/04/30 15:25:22 by gita             ###   ########.fr       */
+/*   Updated: 2025/04/30 15:57:26 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static int	skip_this(char c, char sep)
 		return (1);
 	return (0);
 }
+
 static size_t	one_word_len(char const *s, char c)
 {
 	int	foot;
@@ -26,10 +27,11 @@ static size_t	one_word_len(char const *s, char c)
 	while (*s && *s != c)
 	{
 		s++;
-		foot++;	
+		foot++;
 	}
 	return (foot);
 }
+
 static size_t	number_of_words(char const *s, char c)
 {
 	size_t	number;
@@ -39,18 +41,18 @@ static size_t	number_of_words(char const *s, char c)
 	start_word = 0;
 	while (*s && s)
 	{
-
 		if (!skip_this(*s, c) && start_word == 0)
-			{
-				start_word = 1;
-				number++;
-			}
+		{
+			start_word = 1;
+			number++;
+		}
 		if (skip_this(*s, c))
 			start_word = 0;
 		s++;
 	}
 	return (number);
 }
+
 static void	*release(char **arr_of_pointers, int m)
 {
 	int	i;
@@ -59,11 +61,12 @@ static void	*release(char **arr_of_pointers, int m)
 	while (i <= m)
 	{
 		free (arr_of_pointers[i]);
-		i++;;
+		i++;
 	}
 	free (arr_of_pointers);
 	return (NULL);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**feather;
