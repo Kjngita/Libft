@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:06:14 by gita              #+#    #+#             */
-/*   Updated: 2025/04/30 22:03:55 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/02 15:16:47 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	how_long_number_is(int num)
 {
-	int step;
+	int	step;
 
-	step = 0;	
+	step = 0;
 	if (num <= 0)
 		step += 1;
 	while (num != 0)
