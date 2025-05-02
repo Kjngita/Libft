@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 13:47:43 by gita              #+#    #+#             */
-/*   Updated: 2025/05/03 00:26:29 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 00:41:02 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	fire = 0;
 	if (!s || !f)
 		return (NULL);
-	phoenix = ft_calloc(ft_strlen(s) + 1, 1); //SOMETHING HERE
+	phoenix = ft_calloc(ft_strlen(s) + 1, 1);
 	if (phoenix == NULL)
 		return (NULL);
-	while (*s)
+	while (s[fire])
 	{
 		phoenix[fire] = f(fire, s[fire]);
 		fire++;
