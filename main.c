@@ -4,7 +4,7 @@
 
 int main()
 {
-/*	int testme = 'g';
+	int testme = 'g';
 	printf(" TEST SUBJECT: %c\n\n\n", testme);
 
 	printf("ft_isalpha\nShows 0 if not alphabet: %d\n\n", ft_isalpha(testme));
@@ -194,8 +194,8 @@ int main()
 	printf("________________________________\n\n");
 	
 	printf("THE ft_split. Horrible stuff TT_TT\n");
-	char *cake = "   flour  sugar    bksd ";
-	char topping = ' ';
+	char *cake = "-------------";
+	char topping = '-';
 	char **slice = ft_split(cake, topping);
 	printf("String: '%s'\nDelimiter char: '%c'\n", cake, topping);
 	int i = 0;
@@ -205,9 +205,8 @@ int main()
 		i++;
 	}
 	free(slice);
-	return (0);
 	printf("________________________________\n\n");
-*/
+
 	printf("ft_itoa\n");
 	int nb = -1235463983;
 	printf("Here is the int:\t%i\n", nb);
