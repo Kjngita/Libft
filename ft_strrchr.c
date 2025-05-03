@@ -6,9 +6,14 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:55:32 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 16:32:33 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 17:53:32 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Return a pointer to the last occurrence of char c or NULL
+if the character is not found. The terminating null byte is
+considered part of the string, so that if c is specified as '\0',
+function returns a pointer to the terminator */
 
 #include "libft.h"
 

@@ -6,9 +6,15 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 13:47:43 by gita              #+#    #+#             */
-/*   Updated: 2025/05/03 00:41:02 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 17:48:52 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Applies the function f to each character of the
+string s, passing its index as the first argument
+and the character itself as the second. A new
+string is created (using malloc(3)) to store the
+results from the successive applications of f. */
 
 #include "libft.h"
 

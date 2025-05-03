@@ -6,9 +6,14 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:17:33 by gita              #+#    #+#             */
-/*   Updated: 2025/04/30 14:53:48 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 17:51:44 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Allocates memory (using malloc(3)) and returns a
+substring from the string ’s’.
+The substring starts at index ’start’ and has a
+maximum length of ’len’. */
 
 #include "libft.h"
 

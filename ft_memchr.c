@@ -6,9 +6,15 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 17:19:47 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 22:54:44 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 17:29:57 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Scans the initial n bytes of the memory area pointed to by s for the
+first instance of c. Both c and the bytes of the memory area pointed to
+by s are interpreted as unsigned char.
+	Return a pointer to the matching byte or NULL if the character
+	does not occur in the given memory area */
 
 #include "libft.h"
 
