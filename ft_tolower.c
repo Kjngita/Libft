@@ -6,12 +6,16 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 20:36:25 by gita              #+#    #+#             */
-/*   Updated: 2025/04/14 20:41:57 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 15:48:45 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	unsigned int	giant;
+
+	giant = (unsigned int) c;
+	if (giant >= 65 && giant <= 90)
+		giant += 32;
+	return (giant);
 }

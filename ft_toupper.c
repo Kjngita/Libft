@@ -6,12 +6,16 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 20:14:10 by gita              #+#    #+#             */
-/*   Updated: 2025/04/14 20:35:35 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/03 15:49:32 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	unsigned int	tiny;
+
+	tiny = (unsigned int)c;
+	if (tiny >= 97 && tiny <= 122)
+		tiny -= 32;
+	return (tiny);
 }
