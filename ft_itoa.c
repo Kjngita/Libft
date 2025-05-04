@@ -33,9 +33,9 @@ char	*ft_itoa(int n)
 	int		length;
 	int		sign;
 
-	sign = 1;
 	length = how_long_number_is(n);
-	vessel = calloc(length + 1, 1);
+	sign = 1;
+	vessel = ft_calloc(length + 1, 1);
 	if (vessel == NULL)
 		return (NULL);
 	if (n < 0)
