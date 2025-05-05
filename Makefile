@@ -30,7 +30,9 @@ CFILES = ft_isalpha.c \
 
 BONUS_CFILES = ft_lstnew.c \
 	ft_lstadd_front.c \
-	ft_lstsize.c
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c
 
 OFILES = $(CFILES:.c=.o)
 
