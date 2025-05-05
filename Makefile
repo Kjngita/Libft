@@ -28,7 +28,11 @@ CFILES = ft_isalpha.c \
 	ft_putchar_fd.c	ft_putstr_fd.c ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+BONUS_CFILES = ft_lstnew.c
+
 OFILES = $(CFILES:.c=.o)
+
+BONUS_OFILES = $(BONUS_CFILES:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -41,12 +45,15 @@ all: $(NAME) clean
 	cc $(CFLAGS) -c $^
 
 clean:
-	rm -f $(OFILES)
+	rm -f $(OFILES) $(BONUS_OFILES)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(OFILES) $(BONUS_OFILES)
+	ar -rcs $(NAME) $^
 
 test: testAxel.c $(NAME)
 	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
@@ -55,4 +62,4 @@ test: testAxel.c $(NAME)
 
 .SILENT:
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all re bonus
