@@ -29,7 +29,8 @@ CFILES = ft_isalpha.c \
 	ft_putnbr_fd.c
 
 BONUS_CFILES = ft_lstnew.c \
-	ft_lstadd_front.c
+	ft_lstadd_front.c \
+	ft_lstsize.c
 
 OFILES = $(CFILES:.c=.o)
 
