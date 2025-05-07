@@ -6,13 +6,13 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:09:33 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 16:47:26 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:05:23 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if ((unsigned char)c >= 48 && (unsigned char)c <= 57)
+	if ((unsigned char)c >= '0' && (unsigned char)c <= '9')
 		return (68);
 	else
 		return (0);

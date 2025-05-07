@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:19:11 by gita              #+#    #+#             */
-/*   Updated: 2025/04/28 16:08:54 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:05:04 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_isalpha(int c)
 	char	ch;
 
 	ch = (unsigned char) c;
-	if (ch < 65 || (ch >= 91 && ch <= 96) || ch > 122)
+	if (ch < 'A' || (ch > 'Z' && ch < 'a') || ch > 'z')
 		return (0);
 	else
 		return (68);
