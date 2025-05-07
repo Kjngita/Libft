@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:04:02 by gita              #+#    #+#             */
-/*   Updated: 2025/04/30 21:27:18 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:40:25 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static size_t	number_of_words(char const *s, char c)
 
 	number = 0;
 	start_word = 0;
-	while (*s && s)
+	while (s != NULL && *s != '\0')
 	{
 		if (!skip_this(*s, c) && start_word == 0)
 		{
@@ -61,6 +61,7 @@ static void	*release(char **arr_of_pointers, int m)
 	while (i <= m)
 	{
 		free (arr_of_pointers[i]);
+		arr_of_pointers[i] = NULL;
 		i++;
 	}
 	free (arr_of_pointers);
@@ -86,10 +87,11 @@ char	**ft_split(char const *s, char c)
 			feather[i] = ft_substr(s, 0, one_word_len(s, c));
 			if (!feather[i])
 				return (release(feather, i));
-			s += one_word_len(s, c) - 1;
+			s += one_word_len(s, c);
 			i++;
 		}
-		s++;
+		else
+			s++;
 	}
 	feather[i] = NULL;
 	return (feather);
