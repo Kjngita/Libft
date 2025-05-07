@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 23:27:56 by gita              #+#    #+#             */
-/*   Updated: 2025/04/24 15:12:33 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:09:11 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	replace;
 
 	newstring = (unsigned char *)s;
-	replace = (int)c;
+	replace = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{

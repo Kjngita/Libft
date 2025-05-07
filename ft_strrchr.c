@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:55:32 by gita              #+#    #+#             */
-/*   Updated: 2025/05/03 17:53:32 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:12:10 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ function returns a pointer to the terminator */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*sky;
+	char	*moonwalk;
 	int		i;
 
-	sky = (char *)s;
-	i = ft_strlen(sky);
+	moonwalk = (char *)s;
+	i = ft_strlen(moonwalk);
 	while (i >= 0)
 	{
-		if (sky[i] == (unsigned char)c || c == 0)
-			return (sky + i);
+		if (moonwalk[i] == (unsigned char)c || c == 0)
+			return (moonwalk + i);
 		i--;
 	}
 	return (NULL);

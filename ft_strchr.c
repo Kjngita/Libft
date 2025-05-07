@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 16:58:31 by gita              #+#    #+#             */
-/*   Updated: 2025/05/03 17:52:38 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/07 15:12:58 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ function returns a pointer to the terminator */
 
 char	*ft_strchr(const char *s, int c)
 {
-	char			*cat;
+	char			*march;
 	unsigned int	i;
 
-	cat = (char *)s;
+	march = (char *)s;
 	i = 0;
-	while (cat[i] || c == '\0')
+	while (march[i] || c == '\0')
 	{
-		if (cat[i] == (unsigned char)c)
-			return (cat + i);
+		if (march[i] == (unsigned char)c)
+			return (march + i);
 		i++;
 	}
 	return (NULL);
