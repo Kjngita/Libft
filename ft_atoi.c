@@ -6,15 +6,15 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:56:42 by gita              #+#    #+#             */
-/*   Updated: 2025/05/07 15:02:53 by gita             ###   ########.fr       */
+/*   Updated: 2025/05/20 16:03:26 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int	p;
-	int	sign;
-	int	num;
+	int		p;
+	int		sign;
+	long	num;
 
 	p = 0;
 	sign = 1;
