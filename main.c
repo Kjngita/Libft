@@ -194,10 +194,10 @@ int main()
 	printf("________________________________\n\n");
 	
 	printf("THE ft_split. Horrible stuff TT_TT\n");
-	char *cake = "-------------";
-	char topping = '-';
+	char *cake = "F 200, 100, 0";
+	char *topping = " ,";
 	char **slice = ft_split(cake, topping);
-	printf("String: '%s'\nDelimiter char: '%c'\n", cake, topping);
+	printf("String: '%s'\nDelimiter set: '%s'\n", cake, topping);
 	int i = 0;
 	while (slice[i])
 	{

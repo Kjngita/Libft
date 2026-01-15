@@ -59,7 +59,7 @@ re: fclean all
 bonus: $(OFILES) $(BONUS_OFILES)
 	ar -rcs $(NAME) $^
 
-test: testAxel.c $(NAME)
+test: function_test.c $(NAME)
 	cc -g $(CFLAGS) -lbsd $^ -o cuckoo
 	./cuckoo
 	rm $(OFILES)
